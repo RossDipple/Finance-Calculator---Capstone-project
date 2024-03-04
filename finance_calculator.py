@@ -10,7 +10,8 @@ while True:
     user_selection = input(
         "Investment - to calculate the amount of interest on your investment.\n"
         "Bond - to calculate the amount you'll have to pay on a home loan.\n"
-        "Please select Investment or Bond to proceed: ")
+        "Please select either Investment or Bond to proceed, alternatively "
+        "select Quit to terminate program: ")
 
     user_selection = user_selection.strip()
     user_selection = user_selection.lower()
@@ -35,7 +36,7 @@ while True:
             # Set values for the calculation variables.
             # Select which calculation to use based on user input.
             # Round the amount to 2 decimal places to present neatly.
-            # Print final amount in f string and break the loop.
+            # Print final amount.
 
             r = (interest_rate / 100)
             P = deposit
@@ -73,7 +74,7 @@ while True:
 
             # Set values for the calculation variables.
             # Round repayment to 2 decimal places to present neatly.
-            # Print repayment sum in f string and break the loop.
+            # Print repayment sum.
 
             P = house_value
             i = (interest_rate / 100) / 12
@@ -87,5 +88,12 @@ while True:
         except ValueError:
             print("Invalid input. Please check you entered correctly.")
 
+    # Add option for user to quit/terminate program
+    elif user_selection == "quit":
+        print("Thank you for using the Financial Calculator. Goodbye!")
+        break
+
     else:
-        print("Invalid input selection. Please enter investment or bond.")
+        print("Invalid input selection. Please select either Investment or "
+              "Bond to proceed, alternatively select Quit to terminate "
+              "program: ")
