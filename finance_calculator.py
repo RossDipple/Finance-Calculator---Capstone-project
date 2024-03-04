@@ -45,13 +45,13 @@ while True:
                 amount = P * (1 + r * t)
                 print("The amount you will earn on your investment "
                       f"is £{amount}.")
-                break
+                
             elif interest_type == "compound":
                 amount = P * math.pow((1 + r), t)
                 amount = round(amount, 2)
                 print("The amount you will earn on your investment "
                       f"is £{amount}.")
-                break
+                
             else:
                 print("Invalid input selection.")
         except ValueError:
@@ -83,7 +83,7 @@ while True:
             repayment = round(repayment, 2)
             print("The amount you will have to pay each month is "
                   f"£{repayment}.")
-            break
+            
         except ValueError:
             print("Invalid input. Please check you entered correctly.")
 
